@@ -242,7 +242,7 @@
     self.waveLength = CGRectGetWidth(self.rootView.frame);
     self.startElevation = @0;
     self.fillDuration = 7.0;
-    self.finalX = 2*self.waveLength;
+    self.finalX = 4*self.waveLength;
     
     //available amplitudes
     self.amplitudeArray = [NSArray arrayWithArray:[self createAmplitudeOptions]];
@@ -276,7 +276,7 @@
         CAKeyframeAnimation *horizontalAnimation =
         [CAKeyframeAnimation animationWithKeyPath:@"position.x"];
         horizontalAnimation.values = @[@(self.lineLayer.position.x),@(-self.finalX + self.waveLength)];
-        horizontalAnimation.duration = 1.0;
+        horizontalAnimation.duration = 2.0;
         horizontalAnimation.repeatCount = HUGE;
         [self.lineLayer addAnimation:horizontalAnimation forKey:@"horizontalAnimation"];
         
